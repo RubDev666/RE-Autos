@@ -1,10 +1,11 @@
 # RE Autos
-Proyecto con Nexts JS (App Router)
+Proyecto con Nexts JS (App Router) y Cloudinary
 
 - React con Next JS (App Router)
 - REST API
 - Express
 - SWR (Para obtener datos)
+- Servicio de imagenes en la nube con Cloudinary
 
 Usando librerias frontend como:
 
@@ -19,6 +20,7 @@ Usando librerias frontend como:
 - Barra de busqueda de autos
 - Manejo de errores
 - Routing (Next js App Router)
+- Slider y animaciones
 - Diseño responsive
 
 Diseño inspirado del sitio:
