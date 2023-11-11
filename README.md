@@ -13,6 +13,7 @@ Usando librerias frontend como:
 - https://swiperjs.com/
 - https://fontawesome.com/
 - https://getcssscan.com/css-box-shadow-examples
+- https://loading.io/css/
 
 ## Caracteristicas del proyecto
 
