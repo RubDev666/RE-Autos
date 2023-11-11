@@ -1,0 +1,168 @@
+ /*--------------------------------------------- SECCIONES---------------*/
+.seccion {
+    padding: 30px 7%;
+    text-align: center;
+}
+ 
+.seccion_gris {
+    background: var(--bg-color-3);
+    color: var(--color-1);
+}
+
+.seccion_white {
+    background: var(--bg-color-1);
+    color: var(--color-2);
+}
+
+#aprobamos_plan {
+    padding: 30px 7% 0;
+}
+
+.seccion h3 {
+    font-size: 29px;
+    margin: 0 0 20px 0;
+    text-align: start;
+}
+
+.seccion p {
+    font-size: 19px;
+    text-align: start;
+}
+
+.border_bottom {
+    border-bottom: solid var(--color-1) 1px;
+    padding: 18px 0;
+    margin: 0;
+}
+
+.line_height {
+    line-height: 30px;
+    margin-top: 28px;
+}
+
+.seccion button {
+    width: 100%;
+    margin-top: 27px;
+    padding: 15px;
+}
+
+.seccion img {
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+}
+
+#aprobamos_plan .img_normal {
+    display: none;
+}
+
+#visitanos {
+    flex-direction: column;
+}
+
+#visitanos .btn_border {
+    border: solid var(--color-2) 1px;
+    width: 100%;
+    margin: 0;
+}
+
+.sedes_contenedor {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.sedes {
+    border-radius: 7px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 20px;
+}
+
+.sede_icono {
+    color: var(--color-4);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.direccion {
+    height: 140px;
+}
+
+.sede_nombre {
+    font-weight: 500;
+}
+
+.sede_direccion {
+    color: var(--color-3);
+}
+ 
+/*------------------------------------- RESPONSIVE SECCIONES ------------- */
+@media screen and (min-width: 640px) {
+    .seccion h3 {
+        font-size: 34px;
+    }
+
+    .seccion button {
+        width: 50%;
+    }
+
+    .seccion img {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .seccion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        text-align: start;
+        padding: 3% 7%;
+    }
+
+    #aprobamos_plan {
+        padding: 3% 7% 5px;
+        flex-direction: row-reverse;
+        justify-content: end;
+    }
+
+    #aprobamos_plan div {
+        padding: 0 0 30px 0;
+    }
+
+    .seccion h3 {
+        font-size: calc(29px + 1vw);
+    }
+
+    .seccion button {
+        width: auto;
+        padding: 14px 70px;
+    }
+
+    .seccion img {
+        width: 50%;
+        max-width: 500px;
+        min-width: 250px;
+    }
+
+    #aprobamos_plan .img_normal {
+        display: block;
+        align-self: flex-end;
+    }
+
+    #aprobamos_plan .img_mobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    #aprobamos_plan div {
+        width: 40%;
+    }
+}

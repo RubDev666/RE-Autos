@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Saira:wght@500;600;700;800&display=swap');
+/*font-family: 'Roboto', sans-serif; --- texto general o parrafos*/
+/*font-family: 'Saira', sans-serif; ---- textos de titulos*/
+
+:root {
+    /*---------------------------CONTENEDORES O CAJAS---------------*/
+    --bg-color-1: #fff;
+    --bg-color-2: #000;
+    --bg-color-3: linear-gradient(to right, #363636, #707070);
+    --bg-color-3-webkit: linear-gradient(to right, #363636, #707070); /*safari*/
+    --box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    /*-----------------------------TEXTOS--------------*/
+    --color-1: #fff;
+    --color-2: #000;
+    --color-3: #555;
+    --color-4: #ff0000;
+
+    /*----------------------TIPOS DE FUENTES-------------*/
+    --text-parrafo: 'Roboto', sans-serif;
+    --text-titulo: 'Saira', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: rgba(238, 26, 26, 0.7);
+}
+
+a {
+    text-decoration: none;
+}
+
+.color-icon {
+    color: var(--color-4);
+}
+
+.text-color-3 {
+    color: var(--color-3);
+}
+
+.text-color-4 {
+    color: var(--color-4);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.titulo {
+    font-family: var(--text-titulo);
+}
+
+.parrafo {
+    font-family: var(--text-parrafo);
+}
+
+.items-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.border-bottom {
+    border-bottom: rgb(219, 219, 219) solid 1px;
+}
+
+.relative {
+    position: relative;
+}
+
+/*-------------BOTONES PRIMARIOS Y SECUNDARIOS (SECCIONES, ENLACES)-----*/
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.btn-primario {
+    background: var(--bg-color-1);
+    color: var(--color-2);
+    border: solid var(--color-2) 1px;
+}
+
+.btn-primario-no-border {
+    background: var(--bg-color-1);
+    color: var(--color-2);
+    border: solid transparent 1px;
+}
+
+.btn-primario:hover,
+.btn-primario-no-border:hover {
+    background: var(--bg-color-2);
+    color: var(--color-1);
+}
+
+.btn-secundario {
+    background: var(--bg-color-2);
+    color: var(--color-1);
+    border: solid var(--color-2) 1px;
+}
+
+.btn-secundario:hover {
+    background: var(--bg-color-1);
+    color: var(--color-2);
+}
+
+/*--------------------------BOTONES ACCION ACORDEONES Y SELECTS ----------*/
+.btn-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-action:hover {
+    color: var(--color-4);
+}
+
+/*------------------------------ "Buscador.jsx" COMPONENT -------------- */
+form {
+    width: 100%;
+    background-color: var(--bg-color-1);
+    flex-direction: row-reverse;
+    border-radius: 7px;
+}
+
+.border-desactivado {
+    border: solid 1px rgba(0, 0, 0, 0.3);
+}
+
+.border-activado {
+    border: solid 1px var(--color-4);
+}
+
+form label button {
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    background-color: var(--bg-color-1);
+    cursor: pointer;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    text-overflow: ellipsis;
+}
+
+form .search-icon {
+    font-size: 25px;
+}
+
+.icon-desactivado {
+    color: #8b8b8b;
+}
+
+.icon-activado {
+    color: var(--color-4)
+}
+
+/*---------------------------- SPINNER ANIMACION MIENTRAS CARGA ALGUN COMPONENTE ---------------- */
+.lds-spinner {
+    color: official;
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 30vh auto;
+}
+
+.lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+}
+
+.lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: var(--bg-color-2);
+}
+
+.lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+}
+
+.lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+}
+
+.lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+}
+
+.lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+}
+
+.lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+}
+
+.lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+}
+
+.lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+}
+
+.lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+}
+
+.lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+}
+
+.lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+}
+
+.lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+}
+
+.lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+}
+
+@keyframes lds-spinner {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*-------------------------- ERROR -------------------- */
+.error {
+    padding: 30px 7%;
+    text-align: center;
+}
+
+.error .error-icon {
+    font-size: 120px;
+}
+
+.error h1 {
+    margin: 0 0 10px;
+    font-size: 25px;
+}
+
+.error p {
+    font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
+    .error {
+        padding: 60px 7%;
+    }
+    
+    .error .error-icon {
+        font-size: 160px;
+    }
+    
+    .error h1 {
+        font-size: 32px;
+    }
+    
+    .error p {
+        font-size: 20px;
+    }
+}
