@@ -55,6 +55,14 @@ const Header = ({ data }) => {
         })
     })
 
+    useEffect(() => {
+        setOpenMenu(false);
+        setNosotrosAcordeon(false);
+        setAyudaAcordeon(false);
+
+        setFiltrosOptions('');
+    }, [pathname])
+
     //para el menu mobile, quitar el scroll del body al abrir el menu
     //al hacerlo de esta forma es mas rapido e inmediata la respuesta y asi evitamos algunos errores de diseño
     useEffect(() => {
@@ -131,7 +139,7 @@ const Header = ({ data }) => {
                     {openMenu && <FontAwesomeIcon icon={faTimes} className='icon-bars color-icon pointer' onClick={() => setOpenMenu(false)} />}
                 </div>
 
-                <nav className={`${openMenu ? 'show' : ''}`}>
+                <nav className={`${openMenu ? 'show' : ''} ${pathname === '/seminuevos' ? 'mobile-seminuevos' : 'mobile'}`}>
                     <div className='ingresar-container'>
                         <p className='titulo'>Te damos la bienvenida</p>
                         <p className='parrafo text-color-3'>Crea una cuenta o inicia sesión para tener el control de tu compra, venta o financiamiento.</p>

@@ -30,7 +30,6 @@ header {
 }
 
 nav {
-    padding: 0 7%;
     display: none;
 }
 
@@ -38,10 +37,18 @@ nav {
     display: block;
 }
 
+.show.mobile-seminuevos {
+    padding: 30px 7% 50px;
+}
+
+.show.mobile {
+    padding: 30px 7% 0;
+}
+
 nav .titulo {
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 nav button {
@@ -183,6 +190,7 @@ nav .links-acordeon .acordeon {
         align-items: center;
         justify-content: center;
         padding: 0;
+        margin: 0;
     }
 
     nav .ingresar-container {
