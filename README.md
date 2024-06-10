@@ -5,6 +5,7 @@ Proyecto con Nexts JS (App Router) y Cloudinary
 - REST API
 - Express
 - SWR (Para obtener datos)
+- API Route
 - Servicio de imagenes en la nube con Cloudinary
 
 Usando librerias frontend como:
